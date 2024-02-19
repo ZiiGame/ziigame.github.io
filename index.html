@@ -10,6 +10,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Skrýt posuvník pro Chrome, Safari a Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  /* Skrýt posuvník pro IE, Edge a Firefox */
+  -ms-overflow-style: none;  /* IE a Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 .googleget {
   height: 150px;
