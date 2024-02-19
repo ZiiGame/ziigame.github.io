@@ -15,12 +15,22 @@ body {
   height: 150px;
   width: auto;
 }
+.rekzii {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .rekzii {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+}
 </style>
 </head>
 <body>
 <h1></h1>
 <p></p>
-<img src="rekzii2png.png" alt="Reconstruction Image" style="max-width:100%;height:auto;">
+<img class="rekzii" src="rekzii2png.png" alt="Reconstruction Image">
 <!-- Přidání nového obrázku s odkazem -->
 <a href="https://play.google.com/store/apps/dev?id=5764656158695164013&hl=en&gl=US" target="_blank">
     <img class="googleget" src="googleget.png" alt="Google Play Store Link">
