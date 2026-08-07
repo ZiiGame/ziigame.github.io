@@ -1,22 +1,17 @@
-Copy these files into your GitHub repository.
+Replace:
+index.html
+css/
+js/
 
-KEEP:
+Keep:
 .git
 CNAME
 robots.txt
 sitemap.xml
 ads.txt
 app-ads.txt
-google*.html
 favicon.png
-.htaccess (if you use it)
+google*.html
+.htaccess
 
-REPLACE:
-index.html
-
-ADD:
-css/
-js/
-assets/
-
-Do NOT delete the .git folder.
+Your logo file (ziigameLogo.png) is included and referenced automatically.

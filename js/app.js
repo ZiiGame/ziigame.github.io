@@ -1,1 +1,1 @@
-console.log('Zii Game website ready.');
+console.log('Zii Game');

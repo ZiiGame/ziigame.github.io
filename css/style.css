@@ -1,8 +1,20 @@
-body{margin:0;background:#0f1117;color:#eee;font-family:Segoe UI,Arial}
-header{display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:#151922;position:sticky;top:0}
-.logo{font-size:28px;color:#00d8ff;font-weight:bold}.logo span{vertical-align:middle}
-nav a{color:#ddd;text-decoration:none;margin-left:20px}nav a:hover{color:#00d8ff}
-.hero{text-align:center;padding:120px 20px;background:linear-gradient(#163d66,#0f1117)}
-.hero h1{font-size:64px;color:#00d8ff}.btn{display:inline-block;padding:14px 26px;background:#00b7ff;color:#fff;border-radius:8px;text-decoration:none}
-section{max-width:1100px;margin:auto;padding:60px 8%}h2{color:#00d8ff}.card{background:#1b2130;padding:25px;border-radius:10px}
-footer{text-align:center;padding:25px;background:#151922}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Segoe UI,Arial,sans-serif;background:#0d1016;color:#fff}
+header{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:15px 7%;background:#121722;border-bottom:1px solid #222}
+.brand img{height:60px}
+nav a{margin-left:24px;color:#ddd;text-decoration:none;font-weight:600}
+nav a:hover{color:#14d8ff}
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:radial-gradient(circle at top,#1b4d80,#0d1016)}
+.hero-logo{width:260px;max-width:70%;filter:drop-shadow(0 0 20px rgba(0,220,255,.25))}
+.hero h1{font-size:58px;margin-top:20px;color:#19d7ff}
+.hero p{margin:20px 0;font-size:22px;color:#cfd6df}
+.button{display:inline-block;padding:14px 30px;background:#00b7ff;color:white;text-decoration:none;border-radius:10px}
+section{max-width:1100px;margin:auto;padding:70px 7%}
+h2{color:#19d7ff;margin-bottom:20px}
+.card{background:#171d28;padding:25px;border-radius:12px;border:1px solid #2d3748}
+footer{text-align:center;padding:30px;background:#121722;color:#888}
+@media(max-width:700px){
+header{flex-direction:column;gap:15px}
+nav a{margin:0 10px}
+.hero h1{font-size:40px}
+}
