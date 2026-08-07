@@ -1,28 +1,40 @@
 html{scroll-behavior:smooth}
-*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial;background:#0d1016;color:#fff;overflow-x:hidden}
-body:before{content:'';position:fixed;inset:-30%;background:radial-gradient(circle,#1d8fff22,#12d6d322,transparent 60%);animation:bg 16s linear infinite;z-index:-2}
-@keyframes bg{0%{transform:translate(-5%,-5%) rotate(0)}50%{transform:translate(5%,5%) rotate(180deg)}100%{transform:translate(-5%,-5%) rotate(360deg)}}
-.topbar{position:sticky;top:0;z-index:9999;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;background:rgba(18,23,34,.72);backdrop-filter:blur(12px);border-bottom:1px solid #2b3647}
-.navlogo{height:52px}
-nav a{color:#ddd;text-decoration:none;margin-left:24px;transition:.25s}
-nav a:hover{color:#10d8d3}
-.hero{min-height:100vh;padding-top:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.heroLogo{width:clamp(180px,30vw,320px);filter:drop-shadow(0 0 25px rgba(16,216,211,.35));animation:float 4s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-10px)}}
-h1{font-size:clamp(2rem,6vw,4.5rem);background:linear-gradient(90deg,#1E88F5,#10D8D3);-webkit-background-clip:text;color:transparent}
-p{color:#bfc8d4}
-.buttons{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px}
-.btn{padding:14px 28px;border-radius:14px;text-decoration:none;color:#fff;background:linear-gradient(90deg,#1E88F5,#10D8D3);transition:.25s}
-.btn:hover{transform:translateY(-4px);box-shadow:0 0 25px rgba(16,216,211,.35)}
-.alt{background:#28303f}
-section{max-width:1100px;margin:auto;padding:80px 6%}
-.card{background:#171d28;border:1px solid #2b3647;border-radius:16px;padding:28px;transition:.3s}
-.card:hover{transform:translateY(-8px);box-shadow:0 0 25px rgba(16,216,211,.25)}
-.reveal{opacity:0;transform:translateY(50px);transition:1s}
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins,sans-serif;background:#0d1117;color:#fff;overflow-x:hidden}
+body:before{content:'';position:fixed;inset:-30%;background:
+radial-gradient(circle,#1E88F522,transparent 40%),
+radial-gradient(circle at right,#10D8D322,transparent 45%);
+animation:bg 20s linear infinite;z-index:-1}
+@keyframes bg{50%{transform:rotate(180deg) scale(1.15)}100%{transform:rotate(360deg)}}
+
+.topbar{position:sticky;top:0;z-index:999;background:rgba(15,18,24,.72);backdrop-filter:blur(12px);
+display:flex;align-items:center;justify-content:space-between;padding:14px 6%;border-bottom:1px solid #283241}
+.navlogo{height:54px}
+#menu a{margin-left:24px;color:#d7dde4;text-decoration:none}
+#menu a:hover{color:#10D8D3}
+#menuBtn{display:none;background:none;border:none;color:#fff;font-size:30px;cursor:pointer}
+
+.hero{min-height:100vh;padding:140px 20px 40px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.heroLogo{width:clamp(140px,22vw,260px);filter:drop-shadow(0 0 28px rgba(16,216,211,.35));animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+h1{font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.1;background:linear-gradient(90deg,#1E88F5,#10D8D3);-webkit-background-clip:text;color:transparent}
+p{max-width:700px;color:#b8c3cf}
+.buttons{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:14px 28px;border-radius:14px;text-decoration:none;background:linear-gradient(90deg,#1E88F5,#10D8D3);color:#fff;transition:.25s}
+.btn:hover{transform:translateY(-4px);box-shadow:0 0 24px rgba(16,216,211,.35)}
+.secondary{background:#283241}
+section{max-width:1100px;margin:auto;padding:60px 6%}
+.card{background:#171d28;border:1px solid #2b3647;border-radius:18px;padding:28px;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 0 20px rgba(16,216,211,.2)}
+.reveal{opacity:0;transform:translateY(40px);transition:1s}
 .reveal.show{opacity:1;transform:none}
+
 @media(max-width:768px){
-.topbar{flex-direction:column;gap:12px}
-nav a{margin:0 8px}
-.hero{padding-top:150px}
-.heroLogo{width:180px}
+.navlogo{height:42px}
+.hero{padding-top:120px}
+.heroLogo{width:130px}
+#menuBtn{display:block}
+#menu{display:none;position:absolute;top:74px;left:0;right:0;background:#121722;padding:16px}
+#menu.open{display:flex;flex-direction:column}
+#menu a{margin:10px 0}
 }

@@ -4,35 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Zii Game</title>
-<link rel="icon" href="favicon.png">
 <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="topbar">
-  <img src="ziigameLogo.png" class="navlogo" alt="Zii Game">
-  <nav>
-    <a href="#about">About</a>
-    <a href="#game">Game</a>
-    <a href="#devlog">Devlog</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <img class="navlogo" src="ziigameLogo.png" alt="Zii Game">
+    <button id="menuBtn">☰</button>
+    <nav id="menu">
+        <a href="#about">About</a>
+        <a href="#game">Game</a>
+        <a href="#devlog">Devlog</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <section class="hero">
-    <img src="ziigameLogo.png" class="heroLogo" alt="logo">
-    <h1>CREATE. PLAY. DISCOVER.</h1>
-    <p>Modern indie game development.</p>
+    <img class="heroLogo" src="ziigameLogo.png" alt="Logo">
+    <h1>Made by a Gamer.<br>Built for Gamers.</h1>
+    <p>Every mechanic, every feature and every update is built with players in mind.</p>
+
     <div class="buttons">
-      <a href="#game" class="btn">Current Game</a>
-      <a href="#devlog" class="btn alt">Devlog</a>
+        <a class="btn" href="#game">Current Project</a>
+        <a class="btn secondary" href="#devlog">Development Log</a>
     </div>
 </section>
 
-<section id="about" class="reveal"><h2>About</h2><div class="card">Official Zii Game website.</div></section>
-<section id="game" class="reveal"><h2>Current Project</h2><div class="card">Coming Soon...</div></section>
-<section id="devlog" class="reveal"><h2>Development Log</h2><div class="card">Latest updates will appear here.</div></section>
-<section id="contact" class="reveal"><h2>Community</h2><div class="card">Steam • Discord • Newsletter</div></section>
+<section id="about" class="reveal"><div class="card"><h2>About</h2><p>Welcome to Zii Game.</p></div></section>
+<section id="game" class="reveal"><div class="card"><h2>Current Project</h2><p>Coming soon...</p></div></section>
+<section id="devlog" class="reveal"><div class="card"><h2>Devlog</h2><p>Latest progress will appear here.</p></div></section>
+<section id="contact" class="reveal"><div class="card"><h2>Community</h2><p>Steam • Discord • Newsletter</p></div></section>
 
 <script src="js/app.js"></script>
 </body>
