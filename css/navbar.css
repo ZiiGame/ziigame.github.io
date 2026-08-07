@@ -1,0 +1,211 @@
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.topbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 80px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 60px;
+
+    z-index: 9999;
+
+    background: rgba(8,12,20,.55);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255,255,255,.05);
+
+    transition: .3s;
+
+}
+
+/* Logo */
+
+.navlogo{
+
+    height:52px;
+
+    transition:.3s;
+
+}
+
+.navlogo:hover{
+
+    transform:scale(1.05);
+
+    filter:drop-shadow(0 0 12px rgba(16,216,211,.5));
+
+}
+
+/* Navigation */
+
+#menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:36px;
+
+}
+
+#menu a{
+
+    position:relative;
+
+    color:#d8e2ef;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.25s;
+
+}
+
+#menu a:hover{
+
+    color:white;
+
+}
+
+/* underline */
+
+#menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    border-radius:10px;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #1E88F5,
+
+        #10D8D3
+
+    );
+
+    transition:.25s;
+
+}
+
+#menu a:hover::after{
+
+    width:100%;
+
+}
+
+/* Mobile button */
+
+#menuBtn{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#menuBtn:hover{
+
+    color:#10D8D3;
+
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    .topbar{
+
+        padding:0 20px;
+
+        height:70px;
+
+    }
+
+    .navlogo{
+
+        height:42px;
+
+    }
+
+    #menuBtn{
+
+        display:block;
+
+    }
+
+    #menu{
+
+        position:absolute;
+
+        left:15px;
+
+        right:15px;
+
+        top:82px;
+
+        display:none;
+
+        flex-direction:column;
+
+        padding:20px;
+
+        border-radius:18px;
+
+        background:#171d28;
+
+        border:1px solid #2b3647;
+
+        backdrop-filter:blur(18px);
+
+    }
+
+    #menu.open{
+
+        display:flex;
+
+    }
+
+}

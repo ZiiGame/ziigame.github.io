@@ -1,0 +1,193 @@
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-top: 45px;
+
+}
+
+.btn {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 16px 34px;
+
+    min-width: 210px;
+
+    border-radius: 14px;
+
+    font-weight: 600;
+
+    font-size: 15px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: .28s;
+
+    user-select: none;
+
+}
+
+/* Glow */
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:.45s;
+
+}
+
+.btn:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+.btn:hover{
+
+    transform:
+
+        translateY(-5px)
+
+        scale(1.02);
+
+}
+
+/* ------------------------------------------------ */
+
+/* PRIMARY */
+
+.btn{
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            var(--blue),
+
+            var(--cyan)
+
+        );
+
+    box-shadow:
+
+        0 0 20px rgba(16,216,211,.25);
+
+}
+
+.btn:hover{
+
+    box-shadow:
+
+        0 0 40px rgba(16,216,211,.45);
+
+}
+
+/* ------------------------------------------------ */
+
+/* SECONDARY */
+
+.secondary{
+
+    background:
+
+        rgba(255,255,255,.06);
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+}
+
+.secondary:hover{
+
+    background:
+
+        rgba(255,255,255,.09);
+
+}
+
+/* ------------------------------------------------ */
+
+/* YOUTUBE */
+
+.youtube{
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #1E88F5,
+
+            #10D8D3
+
+        ) !important;
+
+}
+
+/* ------------------------------------------------ */
+
+/* Disabled */
+
+.btn.disabled{
+
+    opacity:.45;
+
+    cursor:default;
+
+}
+
+.btn.disabled:hover{
+
+    transform:none;
+
+    box-shadow:none;
+
+}
