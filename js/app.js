@@ -1,0 +1,1 @@
+console.log('Zii Game website ready.');
