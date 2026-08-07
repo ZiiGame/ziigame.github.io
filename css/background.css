@@ -1,18 +1,19 @@
 /* =========================================================
-   BACKGROUND
+GLOBAL BACKGROUND
 ========================================================= */
 
-.hero-background{
+.global-background{
 
-    position:absolute;
+    position:fixed;
 
     inset:0;
 
     overflow:hidden;
 
-    z-index:-5;
+    z-index:-10;
 
 }
+
 
 /* Left Glow */
 
@@ -21,9 +22,11 @@
     position:absolute;
 
     width:700px;
+
     height:700px;
 
     left:-250px;
+
     top:-220px;
 
     border-radius:50%;
@@ -36,6 +39,8 @@
 
 }
 
+
+
 /* Right Glow */
 
 .glow2{
@@ -43,9 +48,11 @@
     position:absolute;
 
     width:900px;
+
     height:900px;
 
     right:-320px;
+
     bottom:-320px;
 
     border-radius:50%;
@@ -58,6 +65,8 @@
 
 }
 
+
+
 /* Grid */
 
 .grid{
@@ -68,29 +77,26 @@
 
     opacity:.05;
 
+
     background-image:
 
         linear-gradient(
-
             rgba(16,216,211,.25) 1px,
-
             transparent 1px
-
         ),
 
         linear-gradient(
-
             90deg,
-
             rgba(16,216,211,.25) 1px,
-
             transparent 1px
-
         );
+
 
     background-size:72px 72px;
 
 }
+
+
 
 /* Huge controller */
 
@@ -106,12 +112,16 @@
 
     opacity:.035;
 
+
     transform:
 
         rotate(-18deg);
 
+
     filter:
 
-        drop-shadow(0 0 50px #10D8D3);
+        drop-shadow(
+            0 0 50px #10D8D3
+        );
 
 }
