@@ -1,20 +1,28 @@
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Segoe UI,Arial,sans-serif;background:#0d1016;color:#fff}
-header{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:15px 7%;background:#121722;border-bottom:1px solid #222}
-.brand img{height:60px}
-nav a{margin-left:24px;color:#ddd;text-decoration:none;font-weight:600}
-nav a:hover{color:#14d8ff}
-.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:radial-gradient(circle at top,#1b4d80,#0d1016)}
-.hero-logo{width:260px;max-width:70%;filter:drop-shadow(0 0 20px rgba(0,220,255,.25))}
-.hero h1{font-size:58px;margin-top:20px;color:#19d7ff}
-.hero p{margin:20px 0;font-size:22px;color:#cfd6df}
-.button{display:inline-block;padding:14px 30px;background:#00b7ff;color:white;text-decoration:none;border-radius:10px}
-section{max-width:1100px;margin:auto;padding:70px 7%}
-h2{color:#19d7ff;margin-bottom:20px}
-.card{background:#171d28;padding:25px;border-radius:12px;border:1px solid #2d3748}
-footer{text-align:center;padding:30px;background:#121722;color:#888}
-@media(max-width:700px){
-header{flex-direction:column;gap:15px}
-nav a{margin:0 10px}
-.hero h1{font-size:40px}
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial;background:#0d1016;color:#fff;overflow-x:hidden}
+body:before{content:'';position:fixed;inset:-30%;background:radial-gradient(circle,#1d8fff22,#12d6d322,transparent 60%);animation:bg 16s linear infinite;z-index:-2}
+@keyframes bg{0%{transform:translate(-5%,-5%) rotate(0)}50%{transform:translate(5%,5%) rotate(180deg)}100%{transform:translate(-5%,-5%) rotate(360deg)}}
+.topbar{position:sticky;top:0;z-index:9999;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;background:rgba(18,23,34,.72);backdrop-filter:blur(12px);border-bottom:1px solid #2b3647}
+.navlogo{height:52px}
+nav a{color:#ddd;text-decoration:none;margin-left:24px;transition:.25s}
+nav a:hover{color:#10d8d3}
+.hero{min-height:100vh;padding-top:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.heroLogo{width:clamp(180px,30vw,320px);filter:drop-shadow(0 0 25px rgba(16,216,211,.35));animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+h1{font-size:clamp(2rem,6vw,4.5rem);background:linear-gradient(90deg,#1E88F5,#10D8D3);-webkit-background-clip:text;color:transparent}
+p{color:#bfc8d4}
+.buttons{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px}
+.btn{padding:14px 28px;border-radius:14px;text-decoration:none;color:#fff;background:linear-gradient(90deg,#1E88F5,#10D8D3);transition:.25s}
+.btn:hover{transform:translateY(-4px);box-shadow:0 0 25px rgba(16,216,211,.35)}
+.alt{background:#28303f}
+section{max-width:1100px;margin:auto;padding:80px 6%}
+.card{background:#171d28;border:1px solid #2b3647;border-radius:16px;padding:28px;transition:.3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 0 25px rgba(16,216,211,.25)}
+.reveal{opacity:0;transform:translateY(50px);transition:1s}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:768px){
+.topbar{flex-direction:column;gap:12px}
+nav a{margin:0 8px}
+.hero{padding-top:150px}
+.heroLogo{width:180px}
 }

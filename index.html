@@ -2,57 +2,37 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Zii Game</title>
 <link rel="icon" href="favicon.png">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-<div class="brand">
-<img src="ziigameLogo.png" alt="Zii Game Logo">
-</div>
-
-<nav>
-<a href="#about">About</a>
-<a href="#game">Game</a>
-<a href="#devlog">Devlog</a>
-<a href="#contact">Contact</a>
-</nav>
+<header class="topbar">
+  <img src="ziigameLogo.png" class="navlogo" alt="Zii Game">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#game">Game</a>
+    <a href="#devlog">Devlog</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-<img class="hero-logo" src="ziigameLogo.png" alt="Zii Game">
-<h1>Welcome to Zii Game</h1>
-<p>Indie Game Studio creating unique games.</p>
-<a class="button" href="#">Wishlist on Steam</a>
+    <img src="ziigameLogo.png" class="heroLogo" alt="logo">
+    <h1>CREATE. PLAY. DISCOVER.</h1>
+    <p>Modern indie game development.</p>
+    <div class="buttons">
+      <a href="#game" class="btn">Current Game</a>
+      <a href="#devlog" class="btn alt">Devlog</a>
+    </div>
 </section>
 
-<section id="about">
-<h2>About</h2>
-<p>This website will become the home of all Zii Game projects.</p>
-</section>
-
-<section id="game">
-<h2>Current Project</h2>
-<div class="card">
-<h3>Coming Soon</h3>
-<p>Game description, screenshots and trailer.</p>
-</div>
-</section>
-
-<section id="devlog">
-<h2>Development Log</h2>
-<div class="card">Development updates will appear here.</div>
-</section>
-
-<section id="contact">
-<h2>Community</h2>
-<div class="card">Discord • YouTube • Steam • Newsletter</div>
-</section>
-
-<footer>© 2026 Zii Game</footer>
+<section id="about" class="reveal"><h2>About</h2><div class="card">Official Zii Game website.</div></section>
+<section id="game" class="reveal"><h2>Current Project</h2><div class="card">Coming Soon...</div></section>
+<section id="devlog" class="reveal"><h2>Development Log</h2><div class="card">Latest updates will appear here.</div></section>
+<section id="contact" class="reveal"><h2>Community</h2><div class="card">Steam • Discord • Newsletter</div></section>
 
 <script src="js/app.js"></script>
 </body>
