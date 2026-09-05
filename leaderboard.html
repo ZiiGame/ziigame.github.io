@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eride Leaderboard | Zii Game</title>
+<meta name="description" content="Eride Pre-Season leaderboard by Zii Game.">
+<meta name="theme-color" content="#0d1117">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/background.css">
+<link rel="stylesheet" href="css/leaderboard.css">
+</head>
+<body>
+
+<div class="global-background">
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+    <div class="grid"></div>
+    <img class="background-controller" src="ziigameLogo.png" alt="">
+</div>
+
+<header class="topbar">
+    <a href="index.html">
+        <img class="navlogo" src="ziigameLogo.png" alt="Zii Game">
+    </a>
+    <button id="menuBtn" aria-label="Open menu">☰</button>
+    <nav id="menu">
+        <a href="index.html#story">My Story</a>
+        <a href="index.html#game">Game</a>
+        <a href="index.html#devlog">Devlog</a>
+        <a href="leaderboard.html" class="eride-nav">Eride</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<main class="leaderboard-page">
+    <div class="leaderboard-wrap">
+        <header class="leaderboard-header">
+            <h1>Eride Leaderboard</h1>
+            <p>Current Pre-Season ranking. Season 1 is already prepared and will be activated when the season begins.</p>
+        </header>
+
+        <div class="season-tabs" aria-label="Season selection">
+            <div class="season-tab active">Pre-Season</div>
+            <div class="season-tab coming-soon">Season 1 · Coming Soon</div>
+        </div>
+
+        <section class="leaderboard-card">
+            <div class="leaderboard-controls">
+                <label class="search-box">
+                    <span>Search player</span>
+                    <input id="playerSearch" type="search" placeholder="Enter player name..." autocomplete="off">
+                </label>
+            </div>
+
+            <div id="leaderboardStatus" class="leaderboard-status">Loading ranking...</div>
+            <div id="leaderboardContent"></div>
+            <div id="pagination" class="leaderboard-pagination"></div>
+        </section>
+    </div>
+</main>
+
+<script src="js/app.js"></script>
+<script src="js/leaderboard.js"></script>
+</body>
+</html>

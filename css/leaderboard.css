@@ -1,0 +1,253 @@
+/* =========================================================
+   ERIDE LEADERBOARD
+========================================================= */
+
+.leaderboard-page {
+    min-height: 100vh;
+    padding: 130px 24px 70px;
+}
+
+.leaderboard-wrap {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.leaderboard-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.leaderboard-header h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    margin-bottom: 10px;
+}
+
+.leaderboard-header p {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.season-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 28px 0 30px;
+}
+
+.season-tab {
+    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(255,255,255,.05);
+    color: #aebbd0;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font: inherit;
+    font-weight: 600;
+}
+
+.season-tab.active {
+    color: #fff;
+    border-color: rgba(16,216,211,.55);
+    background: linear-gradient(135deg, rgba(30,136,245,.22), rgba(16,216,211,.18));
+    box-shadow: 0 0 24px rgba(16,216,211,.12);
+}
+
+.season-tab.coming-soon {
+    opacity: .55;
+}
+
+.leaderboard-card {
+    background: rgba(23,29,40,.88);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.28);
+}
+
+.leaderboard-controls {
+    padding: 20px 22px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: min(560px, 100%);
+    margin: 0 auto;
+}
+
+.search-box span {
+    color: #8fa0b8;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    white-space: nowrap;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 16px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 10px;
+    background: rgba(8,12,20,.65);
+    color: #fff;
+    font: inherit;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #66758a;
+}
+
+.search-box input:focus {
+    border-color: rgba(16,216,211,.6);
+    box-shadow: 0 0 0 3px rgba(16,216,211,.08);
+}
+
+.leaderboard-status {
+    padding: 18px 22px;
+    color: #aebbd0;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    text-align: center;
+}
+
+.leaderboard-table-wrap {
+    overflow-x: auto;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 17px 22px;
+    border-bottom: 1px solid rgba(255,255,255,.055);
+    text-align: left;
+}
+
+.leaderboard-table th {
+    color: #8fa0b8;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    white-space: nowrap;
+}
+
+.leaderboard-table td {
+    color: #fff;
+}
+
+.leaderboard-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.rank {
+    width: 80px;
+    font-weight: 700;
+    color: #10d8d3 !important;
+}
+
+.player-name {
+    font-weight: 600;
+    min-width: 180px;
+}
+
+.level {
+    text-align: center !important;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.score {
+    text-align: right !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.leaderboard-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex-wrap: wrap;
+    padding: 22px;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.page-button {
+    min-width: 42px;
+    height: 40px;
+    padding: 0 13px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 9px;
+    background: rgba(255,255,255,.05);
+    color: #d8e2ef;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.page-button:hover:not(:disabled) {
+    color: #fff;
+    border-color: rgba(16,216,211,.45);
+    background: rgba(16,216,211,.10);
+}
+
+.page-button.active {
+    color: #fff;
+    border-color: rgba(16,216,211,.65);
+    background: linear-gradient(135deg, rgba(30,136,245,.28), rgba(16,216,211,.22));
+}
+
+.page-button:disabled {
+    opacity: .35;
+    cursor: default;
+}
+
+.page-dots {
+    color: #718198;
+    padding: 0 3px;
+}
+
+.empty-state {
+    padding: 45px 20px;
+    text-align: center;
+    color: #9eacc0;
+}
+
+@media(max-width:700px) {
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .search-box span {
+        text-align: center;
+    }
+}
+
+@media(max-width:600px) {
+    .leaderboard-page {
+        padding: 105px 12px 45px;
+    }
+
+    .leaderboard-table th,
+    .leaderboard-table td {
+        padding: 14px 12px;
+    }
+
+    .rank {
+        width: 55px;
+    }
+
+    .player-name {
+        min-width: 140px;
+    }
+}
